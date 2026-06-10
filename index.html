@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI Exam Behaviour Detection - Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>AI Exam Behaviour Detection</h1>
+    <p>Demo using a Teachable Machine image model to detect exam behaviours (gaze, phones, cheating, etc.).</p>
+  </header>
+
+  <main>
+    <div class="controls">
+      <label for="model-url">Model URL:</label>
+      <input id="model-url" type="text" value="https://teachablemachine.withgoogle.com/models/vx6NXM9Sm/">
+      <button id="start-btn">Start</button>
+      <button id="stop-btn" disabled>Stop</button>
+    </div>
+
+    <div id="status" class="status">Idle</div>
+
+    <div id="webcam-container" class="webcam"></div>
+    <div id="label-container" class="labels"></div>
+  </main>
+
+  <footer>
+    <small>Tip: Serve this folder on <code>http://localhost</code> for webcam access.</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
